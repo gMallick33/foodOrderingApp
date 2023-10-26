@@ -14,7 +14,7 @@ const Body = () => {
     }, []);
 
 
-    const promotedRestaurantCard = RestaurantCardPromoted(RestaurantCard);
+    // const promotedRestaurantCard = RestaurantCardPromoted(RestaurantCard);
 
     const fetchData = async () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
@@ -55,9 +55,7 @@ const Body = () => {
             <div className="flex flex-wrap ml-14">
                 {
                     filteredList.map((resCard) => (
-                        resCard.info.promoted 
-                        ? <Link key={resCard.info.id} to={"/restaurants/" + resCard.info.id}><RestaurantCardPromoted resData={resCard}/></Link>
-                        : <Link key={resCard.info.id} to={"/restaurants/" + resCard.info.id}><RestaurantCard resData={resCard}/></Link>
+                         <Link key={resCard.info.id} to={"/restaurants/" + resCard.info.id}><RestaurantCard resData={resCard}/></Link>
                     )
                 )}
                 

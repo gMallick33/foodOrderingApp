@@ -36,7 +36,7 @@ const Header = () => {
                     </li>
 
                     <li className="px-4">
-                        <button className="login" onClick={() => {
+                        <button className="bg-gray-500 text-white rounded-md px-2 py-1" onClick={() => {
                             buttonName === "login" ? setButtonName("logout") : setButtonName("login");
                         }}>
                             {buttonName}
