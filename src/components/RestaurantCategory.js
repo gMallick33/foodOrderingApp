@@ -11,8 +11,8 @@ export const RestaurantCategory = ({data}) => {
 
     return (
         <div>
-            <div className="bg-gray-200 w-6/12 mx-auto my-2 p-2 shadow-lg" onClick={handleClick}>
-                <div className="flex justify-between mb-4 cursor-pointer">
+            <div className="bg-gray-200 w-6/12 mx-auto my-2 p-2 shadow-lg">
+                <div className="flex justify-between mb-4 cursor-pointer" onClick={handleClick}>
                     <span className="font-bold text-lg">
                         {data.title} ({data.itemCards.length})
                     </span>
